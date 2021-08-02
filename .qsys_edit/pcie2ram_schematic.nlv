@@ -1,0 +1,28 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst pcie2ram.sysid_qsys_0 -pg 1 -lvl 2 -y 360
+preplace inst pcie2ram.pcie_hip -pg 1 -lvl 1 -y 60
+preplace inst pcie2ram.pcie_reconfig -pg 1 -lvl 2 -y 180
+preplace inst pcie2ram.pcie_ram -pg 1 -lvl 2 -y 440
+preplace inst pcie2ram.clk_125_out -pg 1 -lvl 2 -y 320
+preplace inst pcie2ram.clk_125 -pg 1 -lvl 1 -y 320
+preplace inst pcie2ram -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>pcie2ram</net_container>(SLAVE)pcie2ram.pcie_ram_clk,(SLAVE)pcie_ram.clk2) 1 0 2 NJ 470 NJ
+preplace netloc POINT_TO_POINT<net_container>pcie2ram</net_container>(SLAVE)pcie_reconfig.mgmt_rst_reset,(MASTER)clk_125.clk_reset) 1 1 1 430
+preplace netloc FAN_OUT<net_container>pcie2ram</net_container>(SLAVE)pcie_reconfig.mgmt_clk_clk,(MASTER)clk_125.clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)clk_125_out.in_clk) 1 1 1 470
+preplace netloc EXPORT<net_container>pcie2ram</net_container>(SLAVE)pcie_hip.refclk,(SLAVE)pcie2ram.hip_refclk) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>pcie2ram</net_container>(SLAVE)pcie_reconfig.reconfig_to_xcvr,(SLAVE)pcie_hip.reconfig_to_xcvr) 1 0 2 150 50 450
+preplace netloc EXPORT<net_container>pcie2ram</net_container>(SLAVE)pcie_hip.npor,(SLAVE)pcie2ram.hip_npor) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>pcie2ram</net_container>(SLAVE)pcie_ram.clk1,(MASTER)pcie_hip.coreclkout) 1 1 1 410
+preplace netloc EXPORT<net_container>pcie2ram</net_container>(SLAVE)pcie_hip.hip_ctrl,(SLAVE)pcie2ram.hip_ctrl) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>pcie2ram</net_container>(SLAVE)sysid_qsys_0.reset,(SLAVE)pcie_ram.reset1,(MASTER)pcie_hip.nreset_status) 1 1 1 370
+preplace netloc EXPORT<net_container>pcie2ram</net_container>(SLAVE)clk_125.clk_in_reset,(SLAVE)pcie2ram.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pcie2ram</net_container>(SLAVE)pcie2ram.pcie_ram_bus,(SLAVE)pcie_ram.s2) 1 0 2 NJ 550 NJ
+preplace netloc EXPORT<net_container>pcie2ram</net_container>(SLAVE)clk_125.clk_in,(SLAVE)pcie2ram.clk) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>pcie2ram</net_container>(SLAVE)pcie_hip.reconfig_from_xcvr,(SLAVE)pcie_reconfig.reconfig_from_xcvr) 1 0 2 130 30 490
+preplace netloc EXPORT<net_container>pcie2ram</net_container>(SLAVE)pcie_ram.reset2,(SLAVE)pcie2ram.pcie_ram_reset) 1 0 2 NJ 310 NJ
+preplace netloc EXPORT<net_container>pcie2ram</net_container>(SLAVE)pcie2ram.hip_serial,(SLAVE)pcie_hip.hip_serial) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pcie2ram</net_container>(MASTER)clk_125_out.out_clk,(MASTER)pcie2ram.clk_125) 1 2 1 N
+preplace netloc FAN_OUT<net_container>pcie2ram</net_container>(MASTER)pcie_hip.Rxm_BAR0,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)pcie_ram.s1) 1 1 1 390
+levelinfo -pg 1 0 100 780
+levelinfo -hier pcie2ram 110 180 550 700

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="159" />
+   <irq preferredWidth="34" />
+   <inputclock preferredWidth="142" />
+   <name preferredWidth="181" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/DSP,Library/Processors and Peripherals/Inter-Process Communication,Library/Basic Functions,Library/Basic Functions/DMA,Library/Qsys Interconnect/Memory-Mapped Alpha,Library/Memory Interfaces and Controllers/SDRAM,Project,Library/University Program/Bridges,Library/Qsys Interconnect,Library/University Program/Clock,Library/Basic Functions/Bridges and Adaptors/Streaming,Library/University Program/Memory,Library/Basic Functions/Bridges and Adaptors,Library/Qsys Interconnect/Memory-Mapped,Library/Interface Protocols/PCI Express/Example Design Components,Library/University Program/Audio &amp; Video,Library/Basic Functions/Simulation; Debug and Verification,Library/University Program/Communications,Library/Interface Protocols,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library/Processors and Peripherals/Peripherals,Library,Library/Interface Protocols/Serial,Library/Processors and Peripherals,Library/University Program,Library/Memory Interfaces and Controllers/Flash,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/University Program/Audio &amp; Video/Video,Library/Basic Functions/Simulation; Debug and Verification/Verification,Library/DSP/Video and Image Processing,Library/Interface Protocols/PCI Express,Library/Basic Functions/Configuration and Programming,Library/University Program/Generic IO,Library/Basic Functions/On Chip Memory,Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library/Memory Interfaces and Controllers" />
+ <window width="2570" height="1425" x="1915" y="-5" />
+ <generation greybox="0" block_symbol_file="1" />
+</preferences>
